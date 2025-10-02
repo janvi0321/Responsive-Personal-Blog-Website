@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Tech Blog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Blog website</h1>
+           <nav>
+                <a href="index.html">Articles</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+           </nav>
+
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="blog-layout">
+
+            <!-- Blog Posts Section -->
+            <section id="posts" class="posts-container">
+                <h2>Latest Articles</h2>
+
+                <article class="blog-post">
+                    <h3>Algorithm & Deployment</h3>
+                    <p class="meta">Posted by <strong>The Author</strong> on Oct 2, 2025</p>
+                    <p>This article details the development algorithm and deployment process for our responsive web project, focusing on efficient structure and user experience...</p>
+                    <a href="post.html" class="read-more">Read Full Post &raquo;</a>
+
+
+                    <!-- Comments Section -->
+                    <div class="comments-section">
+                        <h4>Comments (0)</h4>
+                        <div id="comments-list-1" class="comments-list"></div>
+                        <form class="comment-form" data-post-id="1">
+                            <textarea placeholder="Write your comment..." required></textarea>
+                            <button type="submit">Post Comment</button>
+                        </form>
+                    </div>
+                </article>
+            </section>
+            
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="widget">
+                    <h3>Search</h3>
+                    <input type="search" placeholder="Search articles...">
+                </div>
+                <div class="widget">
+                    <h3>Topics</h3>
+                    <ul>
+                        <li><a href="#">#HTML5</a></li>
+                        <li><a href="#">#CSS_Grid</a></li>
+                        <li><a href="#">#VanillaJS</a></li>
+                        <li><a href="#">#Deployment</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 TechPulse Blog. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --light-bg: #f4f7f6;
+    --dark-text: #333;
+    --border-color: #ddd;
+}
+
+/* Reset & Base */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--dark-text);
+    background-color: var(--light-bg);
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+/* Header */
+header {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 15px 0;
+    margin-bottom: 20px;
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: border-bottom 0.3s;
+}
+nav a:hover { border-bottom: 2px solid var(--primary-color); }
+
+/* Layout */
+.blog-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+/* Blog Post */
+.blog-post {
+    background: white;
+    padding: 25px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.blog-post h3 { color: var(--primary-color); margin-bottom: 10px; }
+.meta { font-size: 0.9em; color: #777; margin-bottom: 15px; }
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--primary-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Comments */
+.comments-section { margin-top: 30px; border-top: 1px solid var(--border-color); padding-top: 20px; }
+.comment-form textarea {
+    width: 100%; padding: 10px; margin-bottom: 10px;
+    border: 1px solid var(--border-color); border-radius: 4px;
+}
+.comment-form button {
+    background: var(--secondary-color); color: white; border: none;
+    padding: 10px 15px; border-radius: 4px; cursor: pointer;
+}
+.comment-form button:hover { background: #3b5168; }
+.comment {
+    background: var(--light-bg); padding: 10px; border-radius: 4px;
+    margin-bottom: 10px; font-size: 0.95em;
+}
+.comment-meta {
+    display: flex; justify-content: space-between;
+    font-size: 0.8em; color: #999;
+}
+.delete-btn { color: red; cursor: pointer; }
+
+/* Sidebar */
+.sidebar {
+    background: white;
+    padding: 25px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.sidebar .widget { margin-bottom: 25px; }
+.sidebar h3 {
+    border-bottom: 2px solid var(--primary-color);
+    margin-bottom: 15px; padding-bottom: 5px;
+}
+.sidebar input[type="search"] {
+    width: 100%; padding: 10px; border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+.sidebar ul { list-style: none; }
+.sidebar ul li a { text-decoration: none; color: var(--dark-text); }
+.sidebar ul li a:hover { color: var(--primary-color); }
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: var(--secondary-color);
+    color: #ccc;
+    margin-top: 30px;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    .blog-layout { grid-template-columns: 2fr 1fr; }
+}
+/* Make footer stick to bottom */
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;  /* pushes footer down */
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: var(--secondary-color);
+    color: #ccc;
+    margin-top: auto; /* ensures footer is at bottom */
+}

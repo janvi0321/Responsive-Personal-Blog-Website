@@ -1,2 +1,2 @@
-# Responsive-Personal-Blog-Website
-website created using html css and js
+# Responsive Personal Blog Website 
+project done using html css and js
